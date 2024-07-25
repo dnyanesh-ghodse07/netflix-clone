@@ -1,0 +1,31 @@
+.title-cards{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-cards h2{
+    margin: 10px 0;
+}
+
+.card-list{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.card-list::-webkit-scrollbar{
+    display: none;
+}
+
+.card-list img{
+    width: 240px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.card-list .card{
+    position: relative;
+}

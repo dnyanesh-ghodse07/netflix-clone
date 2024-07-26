@@ -1,24 +1,17 @@
-import { useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
 import './App.css'
+import Player from './pages/Player/Player';
 
 function App() {
-
-  const apiKey = '75b3638de1381b405aed785be9389af3'
-
-  const getData = async () => {
-      const res = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`);
-      const data = await res.json();
-      console.log(data);
-  }
-
-  useEffect(() => {
-    getData();
-  },[])
-
   return (
     <>
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/player/:id' element={<Player />} />
+      </Routes>
     </>
   )
 }

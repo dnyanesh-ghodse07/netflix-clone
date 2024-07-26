@@ -7,6 +7,7 @@ import playIcon from "../../assets/play.svg";
 import infoIcon from "../../assets/info.svg";
 import TitleCards from "../../components/TitleCards/TitleCards";
 import "./Home.css";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -36,11 +37,12 @@ const Home = () => {
         </div>
       </div>
       <div className="more-cards">
-        <TitleCards />
-        <TitleCards />
-        <TitleCards />
-        <TitleCards />
+        <TitleCards title='Only on netflix' category='popular' />
+        <TitleCards title='Upcoming' category='top_rated'/>
+        <TitleCards title='Top pics for you' category='upcoming' />
+        <TitleCards title='Blockbuster Movies' category='now_playing' />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -29,3 +29,20 @@
 .card-list .card{
     position: relative;
 }
+
+.card{
+    position: relative;
+}
+
+.card a{
+    color: #fff;
+}
+
+.card p{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.4), transparent);
+}

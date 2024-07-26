@@ -3,11 +3,24 @@ import logo from "../../assets/logo.svg";
 import search from "../../assets/search.svg";
 import bell from "../../assets/bell.svg";
 import profile from "../../assets/profile.png";
+import { useEffect, useRef } from "react";
 
 
 const Navbar = () => {
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY >= 80){
+        navRef.current.classList.add('nav-dark');
+      }else{
+        navRef.current.classList.remove('nav-dark');
+      }
+    })
+  },[])
+
   return (
-    <div className="navbar">
+    <div className="navbar" ref={navRef}>
       <div className="navbar-left">
         <img src={logo} alt="logo" />
         <ul>
